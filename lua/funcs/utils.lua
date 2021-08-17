@@ -60,7 +60,7 @@ function M.file_write(buffer,input, index)
         vim.api.nvim_command("edit " .. id)
         vim.api.nvim_buf_set_lines(id,index - 1, index, false, input)  
     else
-        print("file" .. buffer .. ".cpp doesn't exist" )
+        print("file " .. buffer .. ".cpp doesn't exist" )
     end
 end
 

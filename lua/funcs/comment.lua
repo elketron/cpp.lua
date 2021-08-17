@@ -24,12 +24,10 @@ M.file_type = {
 }
 
 local function set_comment_option(ext)
-    for  _,k in next, M.file_type, nil do
-        if _ == string.sub(ext, 1, #ext - 1) then
+    for  v,k in next, M.file_type, nil do
+        if v == string.sub(ext, 1, #ext - 1) then
             return k
-
         end
-        print(ext,_,k)
     end
     return "//"
 end
