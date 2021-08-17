@@ -8,7 +8,7 @@
 --
 -- }
 -- writes to another file
-local utils = require("cpp.utils")
+local utils = require("funcs.utils")
 
 local M = {}
 
