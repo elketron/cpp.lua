@@ -1,1 +1,1 @@
-command! Mkfun lua require("cpp").mkfun()
+command! Mkfun lua require("funcs").mkfun()

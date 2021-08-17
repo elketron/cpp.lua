@@ -14,7 +14,7 @@ local patterns = {
 }
 
 -- split a string into a table
-local function split(s, delimiter)
+function M.split(s, delimiter)
     result = {};
     for match in (s..delimiter):gmatch("(.-)"..delimiter) do
         table.insert(result, match);
@@ -37,14 +37,14 @@ function M.change_func(s, class)
             break
         end
     end
-    s =  {string.sub(s,5,b) .. class .. "::" .. string.sub(s,b + 1,#s - 1) .. "{","\t","}"}
+    s =  {string.sub(s,5,b) .. class .. "::" .. string.sub(s,b + 1,#s - 1) .. "{","}"}
     return s
 end
 
 -- search files in file structure and return true if it is found
 local function file_exists(buffer)
     local find = io.popen("find ./ -name '*.cpp'")
-    local result = split(find:read("*a"), "\n")
+    local result = M.split(find:read("*a"), "\n")
     for v,k in ipairs(result) do 
         if string.find(k, "Todo") ~= nil then
             return true, k
