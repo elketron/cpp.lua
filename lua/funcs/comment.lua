@@ -10,7 +10,7 @@ local function init(lines)
     local win_pos = vim.api.nvim_win_get_cursor(0) -- get current cursor position
     local line = vim.api.nvim_buf_get_lines(0,win_pos[1] - 1, win_pos[1] + lines - 1, false)
     local ext = utils.split(vim.api.nvim_buf_get_name(0),"%.")
-    return win_pos[1], line, ext[2]
+    return win_pos[1], line, ext[#ext]
 end
 
 
