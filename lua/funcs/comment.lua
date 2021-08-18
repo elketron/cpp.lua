@@ -38,6 +38,7 @@ end
 function M.comment(lines)
     local pos,line,ext = init(lines)
     local com_opt = set_comment_option(ext)
+    print(lines)
     
     --change line to commented line
     for  _,k in ipairs(line) do
