@@ -17,3 +17,6 @@ this is a plugin of a collection of helper functions to make my live easier
     * general function for uncommenting a line or multiple lines
     * takes an int parameter for amount of lines to uncomment
     * call with lua require"funcs".unc(int)
+4. arduino commands
+- arduino compile = acom
+- ardunio upload = aup
